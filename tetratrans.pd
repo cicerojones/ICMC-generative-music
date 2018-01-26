@@ -13,7 +13,7 @@
 1;
 #X text 47 64 TOP LEVEL;
 #X text 139 76 THERE WILL BE TIMING PROBLEMS TO SORT OUT SOON;
-#N canvas 34 306 519 463 audiopc1 1;
+#N canvas 25 321 519 463 audiopc1 0;
 #X obj 117 164 inlet;
 #N canvas 1074 47 153 254 v1 0;
 #X obj 20 28 inlet;
@@ -424,23 +424,23 @@
 #X obj 122 335 *~;
 #X obj 318 311 * 0.01;
 #X obj 318 174 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 5640 1;
-#N canvas 1070 86 553 524 trans 1;
+-1 -1 1000 1;
+#N canvas 69 35 553 524 trans 0;
 #X obj 134 30 inlet;
 #X obj 134 64 unpack f f f f;
 #X floatatom 70 105 5 0 0 0 - - -, f 5;
 #X floatatom 196 109 5 0 0 0 - - -, f 5;
 #X floatatom 352 106 5 0 0 0 - - -, f 5;
 #X floatatom 312 106 5 0 0 0 - - -, f 5;
-#X obj 70 423 outlet;
-#X obj 208 416 outlet;
-#X obj 332 431 outlet;
-#X obj 393 433 outlet;
+#X obj 71 389 outlet;
+#X obj 206 386 outlet;
+#X obj 302 389 outlet;
+#X obj 378 387 outlet;
 #X obj 71 235 + 60;
 #X obj 71 347 mtof;
 #X obj 71 316 + 0;
 #X obj 89 291 t b f;
-#N canvas 325 597 113 179 oct1 0;
+#N canvas 902 765 113 179 oct1 0;
 #X obj 15 148 outlet;
 #X floatatom 15 126 5 0 0 0 - - -, f 5;
 #X msg 10 7 -24;
@@ -455,7 +455,7 @@
 #X connect 5 0 1 0;
 #X connect 6 0 1 0;
 #X restore 89 270 pd oct1;
-#N canvas 875 23 399 419 transform 0;
+#N canvas 89 536 399 419 transform 0;
 #X floatatom 74 346 5 0 0 0 - - -, f 5;
 #X obj 72 372 s transf;
 #X obj 74 313 + 60;
@@ -477,7 +477,7 @@
 #X msg 313 250 5;
 #X msg 328 269 6;
 #X obj 111 96 random 12;
-#X obj 111 40 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 111 40 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 111 79 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -514,7 +514,7 @@
 #X obj 206 332 + 0;
 #X obj 224 307 t b f;
 #X obj 231 209 t b f;
-#N canvas 518 183 120 207 oct2 0;
+#N canvas 1023 760 120 207 oct2 0;
 #X obj 25 183 outlet;
 #X floatatom 25 161 5 0 0 0 - - -, f 5;
 #X floatatom 25 136 5 0 0 0 - - -, f 5;
@@ -531,7 +531,7 @@
 #X connect 6 0 2 0;
 #X connect 7 0 2 0;
 #X restore 224 286 pd oct2;
-#X floatatom 120 394 5 0 0 0 - - -, f 5;
+#X floatatom 132 362 5 0 0 0 - - -, f 5;
 #X floatatom 137 255 5 0 0 0 - - -, f 5;
 #X floatatom 95 172 5 0 0 0 - - -, f 5;
 #X obj 95 149 r transf;
@@ -544,7 +544,7 @@
 #X obj 327 210 t b f;
 #X floatatom 327 179 5 0 0 0 - - -, f 5;
 #X obj 327 156 r transf;
-#N canvas 698 200 127 213 oct3 0;
+#N canvas 1144 754 127 213 oct3 0;
 #X obj 36 192 outlet;
 #X floatatom 36 170 5 0 0 0 - - -, f 5;
 #X floatatom 35 146 5 0 0 0 - - -, f 5;
@@ -568,7 +568,7 @@
 #X obj 403 210 t b f;
 #X floatatom 403 179 5 0 0 0 - - -, f 5;
 #X obj 403 156 r transf;
-#N canvas 518 183 101 196 oct4 0;
+#N canvas 1286 754 101 196 oct4 0;
 #X obj 13 171 outlet;
 #X floatatom 13 149 5 0 0 0 - - -, f 5;
 #X floatatom 14 124 5 0 0 0 - - -, f 5;
@@ -639,9 +639,9 @@
 #X restore 117 192 pd trans;
 #X text 70 118 third level - realizations;
 #X text 20 144 set-type received from the second level;
-#X obj 208 416 writesf~ 2;
+#X obj 214 433 writesf~ 2;
 #X msg 296 380 start;
-#X msg 298 403 stop;
+#X msg 354 376 stop;
 #X msg 208 349 open transnoise2.wav;
 #N canvas 509 126 631 342 final1 0;
 #X obj 64 270 outlet~;
@@ -872,7 +872,7 @@
 #X restore 249 277 pd final4;
 #X obj 361 151 line;
 #X obj 433 140 pipe 2000;
-#X obj 366 45 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 366 45 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 365 87 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -896,7 +896,7 @@
 #X connect 10 2 3 0;
 #X connect 10 3 4 0;
 #X connect 14 0 13 0;
-#X connect 15 0 13 1;
+#X connect 15 0 13 0;
 #X connect 16 0 13 0;
 #X connect 17 0 7 0;
 #X connect 18 0 19 0;
@@ -904,6 +904,7 @@
 #X connect 20 0 21 0;
 #X connect 21 0 7 0;
 #X connect 22 0 23 0;
+#X connect 23 0 7 1;
 #X connect 24 0 9 0;
 #X connect 25 0 30 0;
 #X connect 26 0 28 0;
