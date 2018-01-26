@@ -22,3 +22,10 @@ At this stage, a lot of little fussy things have to be set in motion by the user
 Is, unfortunately, unreasonably difficult.
 
 * Deeper analysis
+The only thing that is clearly happening right now, in fact, is that, at the audio-pc level, Turning on a random transposition "function" sets the wheel in motion for the "change." But this change of transpositional level is really the only that appears to be happening??
+
+There needs to be deeper debugging going on.
+
+Getting every voice (v1-v4) to speak at equal volume, whatever the octave and transposition is not happening.
+
+Once things have moved through the transposition level, there need to be easier ways to control the other sound decisions. These decisions include setting volume, level of reverberation and wave type.
