@@ -1,0 +1,24 @@
+* The basic outline
+Breaking down the patch into a series of levels, and then determining the objects that are in common at each level...
+
+- top-level
+  - initializes the "timing"
+  - turns on and off "the process"
+- second-level
+  - contains pitch structures
+  - contains the collective probability table(s)
+- third-level
+  - "audibilizes" the set chosen at level2
+    - many little decisions have to be set in motion by the user
+  - allows a wave file to be written
+
+
+Note, development began on a new "pc-set2" section. No progress has been made.
+
+* To get sound
+At this stage, a lot of little fussy things have to be set in motion by the user.
+
+* Keeping track of what is actually happening
+Is, unfortunately, unreasonably difficult.
+
+* Deeper analysis
